@@ -13,5 +13,6 @@ __pycache__/
 
 # data files
 SentEval/data/senteval_data*
-SentEval/data/
+SentEval/data/*
+!SentEval/data/downstream/get_transfer_data.bash
 datasets/
