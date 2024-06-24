@@ -12,7 +12,17 @@ __pycache__/
 *.txt
 
 # data files
-SentEval/data/senteval_data*
-SentEval/data/*
-!SentEval/data/downstream/get_transfer_data.bash
+SentEval/data/fasttext
+SentEval/data/probing
+SentEval/data/downstream/COCO
+SentEval/data/downstream/CR
+SentEval/data/downstream/MPQA
+SentEval/data/downstream/MR
+SentEval/data/downstream/MRPC
+SentEval/data/downstream/SICK
+SentEval/data/downstream/SNLI
+SentEval/data/downstream/SST
+SentEval/data/downstream/STS
+SentEval/data/downstream/SUBJ
+SentEval/data/downstream/TREC
 datasets/
