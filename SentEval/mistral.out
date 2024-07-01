@@ -1,0 +1,399 @@
+now processing task id::  1
+Thu Jun 27 02:05:56 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               Off |   00000000:01:00.0 Off |                  Off |
+| 30%   28C    P8             22W /  300W |       1MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/nfshomes/litzy/mixture-of-adapters/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+AutoModelForCausalLM: <class 'transformers.models.auto.modeling_auto.AutoModelForCausalLM'>
+/nfshomes/litzy/mixture-of-adapters/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/nfshomes/litzy/mixture-of-adapters/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/nfshomes/litzy/mixture-of-adapters/transformers/__init__.py
+2024-06-27 02:06:05,722 : ***** Transfer task : STS12 *****
+
+
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+2024-06-27 02:06:05,763 : Starting new HTTPS connection (1): huggingface.co:443
+2024-06-27 02:06:05,831 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:06:05,915 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.19s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.78s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:06:14,821 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/nfshomes/litzy/mixture-of-adapters/transformers/tokenization_utils_base.py:2614: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+/nfshomes/litzy/UMD2024/SentEval/senteval/utils.py:39: RuntimeWarning: invalid value encountered in half_scalars
+  return np.dot(u, v) / (np.linalg.norm(u) * np.linalg.norm(v))
+2024-06-27 02:06:18,754 : MSRpar : pearson = -0.0100, spearman = 0.0657
+2024-06-27 02:06:22,340 : MSRvid : pearson = 0.0005, spearman = 0.1559
+2024-06-27 02:06:24,610 : SMTeuroparl : pearson = 0.2208, spearman = 0.3867
+2024-06-27 02:06:28,216 : surprise.OnWN : pearson = 0.1348, spearman = 0.2987
+2024-06-27 02:06:30,421 : surprise.SMTnews : pearson = 0.2137, spearman = 0.2308
+2024-06-27 02:06:30,421 : ALL (weighted average) : Pearson = 0.0903,             Spearman = 0.2123
+2024-06-27 02:06:30,421 : ALL (average) : Pearson = 0.1119,             Spearman = 0.2275
+
+2024-06-27 02:06:30,421 : ***** Transfer task : STS13 (-SMT) *****
+
+
+2024-06-27 02:06:30,517 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:06:30,587 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.05s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.70s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:06:39,076 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+2024-06-27 02:06:40,196 : FNWN : pearson = -0.0819, spearman = -0.0430
+2024-06-27 02:06:43,808 : headlines : pearson = 0.3614, spearman = 0.4092
+2024-06-27 02:06:46,624 : OnWN : pearson = -0.0743, spearman = 0.0609
+2024-06-27 02:06:46,624 : ALL (weighted average) : Pearson = 0.1426,             Spearman = 0.2219
+2024-06-27 02:06:46,624 : ALL (average) : Pearson = 0.0684,             Spearman = 0.1424
+
+2024-06-27 02:06:46,624 : ***** Transfer task : STS14 *****
+
+
+2024-06-27 02:06:46,778 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:06:46,844 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.07s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.71s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:06:55,358 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+2024-06-27 02:06:57,811 : deft-forum : pearson = -0.0161, spearman = -0.0145
+2024-06-27 02:06:59,373 : deft-news : pearson = 0.0885, spearman = 0.1515
+2024-06-27 02:07:02,922 : headlines : pearson = 0.2625, spearman = 0.3228
+2024-06-27 02:07:06,464 : images : pearson = 0.1774, spearman = 0.2056
+2024-06-27 02:07:10,016 : OnWN : pearson = 0.0838, spearman = 0.2533
+2024-06-27 02:07:13,586 : tweet-news : pearson = 0.2269, spearman = 0.2836
+2024-06-27 02:07:13,586 : ALL (weighted average) : Pearson = 0.1553,             Spearman = 0.2235
+2024-06-27 02:07:13,586 : ALL (average) : Pearson = 0.1372,             Spearman = 0.2004
+
+2024-06-27 02:07:13,586 : ***** Transfer task : STS15 *****
+
+
+2024-06-27 02:07:13,909 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:07:13,975 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.08s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.67s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:07:22,383 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+2024-06-27 02:07:24,400 : answers-forums : pearson = 0.1664, spearman = 0.1996
+2024-06-27 02:07:28,009 : answers-students : pearson = 0.2962, spearman = 0.3363
+2024-06-27 02:07:29,851 : belief : pearson = 0.1306, spearman = 0.1489
+2024-06-27 02:07:33,475 : headlines : pearson = 0.3479, spearman = 0.4157
+2024-06-27 02:07:37,109 : images : pearson = 0.1873, spearman = 0.2038
+2024-06-27 02:07:37,109 : ALL (weighted average) : Pearson = 0.2450,             Spearman = 0.2825
+2024-06-27 02:07:37,109 : ALL (average) : Pearson = 0.2257,             Spearman = 0.2608
+
+2024-06-27 02:07:37,110 : ***** Transfer task : STS16 *****
+
+
+2024-06-27 02:07:37,372 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:07:37,459 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.06s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.68s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:07:45,875 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+2024-06-27 02:07:47,295 : answer-answer : pearson = 0.0313, spearman = 0.0385
+2024-06-27 02:07:48,519 : headlines : pearson = 0.4243, spearman = 0.4938
+2024-06-27 02:07:49,673 : plagiarism : pearson = 0.0741, spearman = 0.0669
+2024-06-27 02:07:50,896 : postediting : pearson = 0.1768, spearman = 0.2142
+2024-06-27 02:07:51,982 : question-question : pearson = 0.0077, spearman = 0.0170
+2024-06-27 02:07:51,983 : ALL (weighted average) : Pearson = 0.1479,             Spearman = 0.1720
+2024-06-27 02:07:51,983 : ALL (average) : Pearson = 0.1428,             Spearman = 0.1661
+
+2024-06-27 02:07:51,983 : ***** Transfer task : SICK-Relatedness*****
+
+
+2024-06-27 02:07:52,147 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:07:52,215 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.03s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.68s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:08:00,605 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 02:08:00,782 : Computing embedding for train
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+2024-06-27 02:08:21,482 : Computed train embeddings
+2024-06-27 02:08:21,483 : Computing embedding for dev
+2024-06-27 02:08:23,817 : Computed dev embeddings
+2024-06-27 02:08:23,817 : Computing embedding for test
+2024-06-27 02:08:46,487 : Computed test embeddings
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/scipy/stats/stats.py:3508: PearsonRConstantInputWarning: An input array is constant; the correlation coefficent is not defined.
+  warnings.warn(PearsonRConstantInputWarning())
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/numpy/lib/function_base.py:2691: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[:, None]
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/numpy/lib/function_base.py:2692: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[None, :]
+2024-06-27 02:08:59,758 : Dev : Pearson 0
+2024-06-27 02:08:59,758 : Test : Pearson 0 Spearman 0 MSE 1.2985311700832147                        for SICK Relatedness
+
+2024-06-27 02:08:59,759 : 
+
+***** Transfer task : STSBenchmark*****
+
+
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+2024-06-27 02:08:59,961 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 02:09:00,032 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+now? : True
+now1? : True
+now2? : True
+state_dict is not None: False
+inner1? : True
+inner2? : True
+inner3? : True
+len(resolved_archive_file) > 1: True
+len of resolved_archive_file: 2
+resolved_archive_file: ['/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00001-of-00002.safetensors', '/fs/cml-scratch/litzy/huggingface/hub/models--mistralai--Mistral-7B-v0.1/snapshots/26bca36bde8333b5d7f72e9ed20ccda6a618af24/model-00002-of-00002.safetensors']
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]you end here?
+enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.06s/it]enter
+ininner1?
+ininner2?
+ininner3?
+mismatched_keys: []
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.45s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.69s/it]
+inner4? : True
+inner5? : True
+now3? : True
+now4? : True
+done loading models???
+before model.generation_config load
+2024-06-27 02:09:08,467 : https://huggingface.co:443 "HEAD /mistralai/Mistral-7B-v0.1/resolve/main/generation_config.json HTTP/1.1" 200 0
+model.generation_config load done?
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 02:09:08,641 : Computing embedding for train
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/nfshomes/litzy/mixture-of-adapters/transformers/tokenization_utils_base.py:2614: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+2024-06-27 02:09:35,152 : Computed train embeddings
+2024-06-27 02:09:35,153 : Computing embedding for dev
+2024-06-27 02:09:42,129 : Computed dev embeddings
+2024-06-27 02:09:42,129 : Computing embedding for test
+2024-06-27 02:09:48,551 : Computed test embeddings
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/scipy/stats/stats.py:3508: PearsonRConstantInputWarning: An input array is constant; the correlation coefficent is not defined.
+  warnings.warn(PearsonRConstantInputWarning())
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/numpy/lib/function_base.py:2691: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[:, None]
+/nfshomes/litzy/LLM-Adapters/env38/lib/python3.8/site-packages/numpy/lib/function_base.py:2692: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[None, :]
+2024-06-27 02:10:03,993 : Dev : Pearson 0
+2024-06-27 02:10:03,994 : Test : Pearson 0 Spearman 0 MSE 4.263411781725888                        for SICK Relatedness
+
+{'STS12': {'MSRpar': {'pearson': (-0.010007779418685723, 0.7843735591890872), 'spearman': SpearmanrResult(correlation=0.06569695731758113, pvalue=0.07215685048931565), 'nsamples': 750}, 'MSRvid': {'pearson': (0.00047965159138848234, 0.9895369289249032), 'spearman': SpearmanrResult(correlation=0.15585555842982862, pvalue=1.8078717527767093e-05), 'nsamples': 750}, 'SMTeuroparl': {'pearson': (0.22081714759318502, 1.7789129665405176e-06), 'spearman': SpearmanrResult(correlation=0.38674179801631825, pvalue=7.972689887883592e-18), 'nsamples': 459}, 'surprise.OnWN': {'pearson': (0.13475095366555925, 0.00021471417553404242), 'spearman': SpearmanrResult(correlation=0.2986651607590767, pvalue=6.426713095093662e-17), 'nsamples': 750}, 'surprise.SMTnews': {'pearson': (0.21366771059021752, 1.6741734926052318e-05), 'spearman': SpearmanrResult(correlation=0.23076170276430974, pvalue=3.1927197030314918e-06), 'nsamples': 399}, 'all': {'pearson': {'mean': 0.11194153680433291, 'wmean': 0.09025920419866963}, 'spearman': {'mean': 0.22754423545742286, 'wmean': 0.21227530954707674}}}, 'STS13': {'FNWN': {'pearson': (-0.08185879623913954, 0.26280450341774486), 'spearman': SpearmanrResult(correlation=-0.04302526527095332, pvalue=0.5566343733695671), 'nsamples': 189}, 'headlines': {'pearson': (0.3614161400478488, 1.4694935259629042e-24), 'spearman': SpearmanrResult(correlation=0.4091684418260317, pvalue=1.229289453643666e-31), 'nsamples': 750}, 'OnWN': {'pearson': (-0.07426323777068125, 0.0788391837671564), 'spearman': SpearmanrResult(correlation=0.06092551503846871, pvalue=0.1495372489538738), 'nsamples': 561}, 'all': {'pearson': {'mean': 0.06843136867934266, 'wmean': 0.14261941077155801}, 'spearman': {'mean': 0.14235623053118235, 'wmean': 0.221949180113263}}}, 'STS14': {'deft-forum': {'pearson': (-0.016088718522199424, 0.7335808901622068), 'spearman': SpearmanrResult(correlation=-0.01448154823708302, pvalue=0.7593292900486183), 'nsamples': 450}, 'deft-news': {'pearson': (0.0884589900129376, 0.12632476628929973), 'spearman': SpearmanrResult(correlation=0.15151096743999146, pvalue=0.008576673495321452), 'nsamples': 300}, 'headlines': {'pearson': (0.26254621558742175, 2.738060580667618e-13), 'spearman': SpearmanrResult(correlation=0.3228184114373774, pvalue=1.190837485647554e-19), 'nsamples': 750}, 'images': {'pearson': (0.17740997350798066, 1.011932173953774e-06), 'spearman': SpearmanrResult(correlation=0.205602862098316, pvalue=1.3306009832732051e-08), 'nsamples': 750}, 'OnWN': {'pearson': (0.08384310334792601, 0.02165573344887621), 'spearman': SpearmanrResult(correlation=0.25333750795557747, pvalue=1.9011794126834635e-12), 'nsamples': 750}, 'tweet-news': {'pearson': (0.22688339120212045, 3.273541761613965e-10), 'spearman': SpearmanrResult(correlation=0.2836188988737143, pvalue=2.4250857369454924e-15), 'nsamples': 750}, 'all': {'pearson': {'mean': 0.13717549252269784, 'wmean': 0.15528260970746083}, 'spearman': {'mean': 0.2004011832613156, 'wmean': 0.22345862767974636}}}, 'STS15': {'answers-forums': {'pearson': (0.16635277404924062, 0.0012240765604855245), 'spearman': SpearmanrResult(correlation=0.19955342689561642, pvalue=9.998188083714564e-05), 'nsamples': 375}, 'answers-students': {'pearson': (0.2962173547003634, 1.1774335377806117e-16), 'spearman': SpearmanrResult(correlation=0.3363011119158171, pvalue=2.7484927018377265e-21), 'nsamples': 750}, 'belief': {'pearson': (0.13060278024019215, 0.011356922842014292), 'spearman': SpearmanrResult(correlation=0.14885872204379327, pvalue=0.0038631367959284734), 'nsamples': 375}, 'headlines': {'pearson': (0.3479340340625657, 9.12733997983801e-23), 'spearman': SpearmanrResult(correlation=0.41569312942736647, pvalue=1.0703503707703042e-32), 'nsamples': 750}, 'images': {'pearson': (0.18727786581636055, 2.391114453670486e-07), 'spearman': SpearmanrResult(correlation=0.2038080826718417, pvalue=1.787371816401675e-08), 'nsamples': 750}, 'all': {'pearson': {'mean': 0.22567696177374447, 'wmean': 0.24497675793100146}, 'spearman': {'mean': 0.26084289459088705, 'wmean': 0.28250209962118256}}}, 'STS16': {'answer-answer': {'pearson': (0.03125710980905064, 0.6200211254140529), 'spearman': SpearmanrResult(correlation=0.0384916792330236, pvalue=0.5414267174159375), 'nsamples': 254}, 'headlines': {'pearson': (0.4242875291647834, 2.658197908320683e-12), 'spearman': SpearmanrResult(correlation=0.4937843158631065, pvalue=1.0383991399426885e-16), 'nsamples': 249}, 'plagiarism': {'pearson': (0.07412881067903, 0.26286933253187833), 'spearman': SpearmanrResult(correlation=0.06691056229739539, pvalue=0.3123262600996228), 'nsamples': 230}, 'postediting': {'pearson': (0.17678534749483674, 0.005620462346381758), 'spearman': SpearmanrResult(correlation=0.21422516576823214, pvalue=0.0007563067303314733), 'nsamples': 244}, 'question-question': {'pearson': (0.0077389600970464425, 0.9114486165074913), 'spearman': SpearmanrResult(correlation=0.017008548254763473, pvalue=0.8068957048889582), 'nsamples': 209}, 'all': {'pearson': {'mean': 0.14283955144894944, 'wmean': 0.14788330063973837}, 'spearman': {'mean': 0.16608405428330425, 'wmean': 0.1719598124251237}}}, 'SICKRelatedness': {'devpearson': 0, 'pearson': 0, 'spearman': 0, 'mse': 1.2985311700832147, 'yhat': array([3., 3., 3., ..., 3., 3., 3.]), 'ndev': 500, 'ntest': 4927}, 'STSBenchmark': {'devpearson': 0, 'pearson': 0, 'spearman': 0, 'mse': 4.263411781725888, 'yhat': array([4., 4., 4., ..., 4., 4., 4.]), 'ndev': 1500, 'ntest': 1379}}

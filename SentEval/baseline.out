@@ -1,0 +1,249 @@
+now processing task id::  1
+Thu Jun 27 01:44:16 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               Off |   00000000:81:00.0 Off |                  Off |
+| 30%   32C    P8             22W /  300W |       1MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/nfshomes/litzy/mixture-of-adapters/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/nfshomes/litzy/mixture-of-adapters/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+AutoModelForCausalLM: <class 'transformers.models.auto.modeling_auto.AutoModelForCausalLM'>
+/nfshomes/litzy/mixture-of-adapters/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+2024-06-27 01:44:24,757 : ***** Transfer task : STS12 *****
+
+
+2024-06-27 01:44:24,799 : Starting new HTTPS connection (1): huggingface.co:443
+2024-06-27 01:44:24,839 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2024-06-27 01:44:24,882 : Attempting to acquire lock 139619547860560 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/45a2321a7ecfdaaf60a6c1fd7f5463994cc8907d.lock
+2024-06-27 01:44:24,897 : Lock 139619547860560 acquired on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/45a2321a7ecfdaaf60a6c1fd7f5463994cc8907d.lock
+2024-06-27 01:44:24,929 : https://huggingface.co:443 "GET /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 570
+2024-06-27 01:44:24,964 : Attempting to release lock 139619547860560 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/45a2321a7ecfdaaf60a6c1fd7f5463994cc8907d.lock
+2024-06-27 01:44:24,966 : Lock 139619547860560 released on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/45a2321a7ecfdaaf60a6c1fd7f5463994cc8907d.lock
+is_peft_available, before loading adapter
+2024-06-27 01:44:25,002 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2024-06-27 01:44:25,053 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2024-06-27 01:44:25,088 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/model.safetensors HTTP/1.1" 302 0
+2024-06-27 01:44:25,094 : Attempting to acquire lock 139619542197680 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3.lock
+2024-06-27 01:44:25,102 : Lock 139619542197680 acquired on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3.lock
+2024-06-27 01:44:25,111 : Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+2024-06-27 01:44:25,184 : https://cdn-lfs.huggingface.co:443 "GET /bert-base-uncased/68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1719724622&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxOTcyNDYyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9iZXJ0LWJhc2UtdW5jYXNlZC82OGQ0NWUyMzRlYjRhOTI4MDc0ZGZkODY4Y2VhZDAyMTlhYjg1MzU0Y2M1M2QyMGU3NzI3NTNjNmJiOTE2OWQzP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=fMCO7jBB435JGv8pLAfZ8tEYAffMtEVA712UnPJtQv6bWWEld3YI-AbWc~pv6DHmwB1ZojNMAxajxMDyZ~cJXulWTv7wTw57Q8AX-b6t7KQ0prxNAWtxXS-zLW8OGUTor2AbPwuFSx718-2yPLxr~eJPzu361pEwPJVTy2~ykVI9N0cLbL2p-f0NcmSmBTXiTidXTQWT4J04wCm18eAlwRPtMoWZlKlEGKSXp~3po3NpcdZqPgchahtshvjvqJS-ux4jvk0JY-GwFmjRsUZymVnVgDsuogQKbtECdKe1jzEXb7hupnLcuqf8-7~kaUpkQapH9ZAtnj32zckzfJrZGg__&Key-Pair-Id=K3ESJI6DHPFC7 HTTP/1.1" 200 440449768
+2024-06-27 01:44:27,232 : Attempting to release lock 139619542197680 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3.lock
+2024-06-27 01:44:27,233 : Lock 139619542197680 released on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3.lock
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:44:29,028 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:44:29,031 : Attempting to acquire lock 139619547858064 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/e5c73d8a50df1f56fb5b0b8002d7cf4010afdccb.lock
+2024-06-27 01:44:29,039 : Lock 139619547858064 acquired on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/e5c73d8a50df1f56fb5b0b8002d7cf4010afdccb.lock
+2024-06-27 01:44:29,072 : https://huggingface.co:443 "GET /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 48
+2024-06-27 01:44:29,087 : Attempting to release lock 139619547858064 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/e5c73d8a50df1f56fb5b0b8002d7cf4010afdccb.lock
+2024-06-27 01:44:29,088 : Lock 139619547858064 released on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/e5c73d8a50df1f56fb5b0b8002d7cf4010afdccb.lock
+2024-06-27 01:44:29,114 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2024-06-27 01:44:29,117 : Attempting to acquire lock 139619526343504 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2024-06-27 01:44:29,123 : Lock 139619526343504 acquired on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2024-06-27 01:44:29,150 : https://huggingface.co:443 "GET /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 231508
+2024-06-27 01:44:29,175 : Attempting to release lock 139619526343504 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2024-06-27 01:44:29,176 : Lock 139619526343504 released on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2024-06-27 01:44:29,203 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2024-06-27 01:44:29,236 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2024-06-27 01:44:29,267 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2024-06-27 01:44:29,270 : Attempting to acquire lock 139619526343984 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/949a6f013d67eb8a5b4b5b46026217b888021b88.lock
+2024-06-27 01:44:29,278 : Lock 139619526343984 acquired on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/949a6f013d67eb8a5b4b5b46026217b888021b88.lock
+2024-06-27 01:44:29,336 : https://huggingface.co:443 "GET /bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 200 466062
+2024-06-27 01:44:29,369 : Attempting to release lock 139619526343984 on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/949a6f013d67eb8a5b4b5b46026217b888021b88.lock
+2024-06-27 01:44:29,370 : Lock 139619526343984 released on /fs/cml-scratch/litzy/huggingface/hub/.locks/models--bert-base-uncased/949a6f013d67eb8a5b4b5b46026217b888021b88.lock
+2024-06-27 01:44:31,641 : MSRpar : pearson = 0.3496, spearman = 0.3973
+2024-06-27 01:44:32,397 : MSRvid : pearson = 0.3586, spearman = 0.3900
+2024-06-27 01:44:33,089 : SMTeuroparl : pearson = 0.4735, spearman = 0.5703
+2024-06-27 01:44:34,133 : surprise.OnWN : pearson = 0.5135, spearman = 0.5179
+2024-06-27 01:44:34,804 : surprise.SMTnews : pearson = 0.5337, spearman = 0.4792
+2024-06-27 01:44:34,805 : ALL (weighted average) : Pearson = 0.4332,             Spearman = 0.4607
+2024-06-27 01:44:34,805 : ALL (average) : Pearson = 0.4458,             Spearman = 0.4709
+
+2024-06-27 01:44:34,805 : ***** Transfer task : STS13 (-SMT) *****
+
+
+2024-06-27 01:44:34,863 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+2024-06-27 01:44:34,889 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:44:35,678 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:44:36,261 : FNWN : pearson = 0.4006, spearman = 0.4103
+2024-06-27 01:44:37,154 : headlines : pearson = 0.5821, spearman = 0.5556
+2024-06-27 01:44:37,814 : OnWN : pearson = 0.4652, spearman = 0.4891
+2024-06-27 01:44:37,814 : ALL (weighted average) : Pearson = 0.5155,             Spearman = 0.5124
+2024-06-27 01:44:37,814 : ALL (average) : Pearson = 0.4826,             Spearman = 0.4850
+
+2024-06-27 01:44:37,814 : ***** Transfer task : STS14 *****
+
+
+2024-06-27 01:44:37,899 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+2024-06-27 01:44:37,928 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:44:38,714 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:44:39,373 : deft-forum : pearson = 0.2773, spearman = 0.2837
+2024-06-27 01:44:40,070 : deft-news : pearson = 0.7094, spearman = 0.6707
+2024-06-27 01:44:41,026 : headlines : pearson = 0.5341, spearman = 0.4883
+2024-06-27 01:44:41,973 : images : pearson = 0.4121, spearman = 0.3998
+2024-06-27 01:44:42,921 : OnWN : pearson = 0.6433, spearman = 0.6681
+2024-06-27 01:44:44,129 : tweet-news : pearson = 0.6043, spearman = 0.5593
+2024-06-27 01:44:44,129 : ALL (weighted average) : Pearson = 0.5288,             Spearman = 0.5108
+2024-06-27 01:44:44,130 : ALL (average) : Pearson = 0.5301,             Spearman = 0.5116
+
+2024-06-27 01:44:44,130 : ***** Transfer task : STS15 *****
+
+
+2024-06-27 01:44:44,333 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+2024-06-27 01:44:44,742 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:44:45,525 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:44:46,373 : answers-forums : pearson = 0.5427, spearman = 0.5526
+2024-06-27 01:44:47,357 : answers-students : pearson = 0.5340, spearman = 0.5324
+2024-06-27 01:44:48,140 : belief : pearson = 0.6183, spearman = 0.6236
+2024-06-27 01:44:49,116 : headlines : pearson = 0.6192, spearman = 0.6105
+2024-06-27 01:44:50,083 : images : pearson = 0.5580, spearman = 0.5647
+2024-06-27 01:44:50,083 : ALL (weighted average) : Pearson = 0.5729,             Spearman = 0.5739
+2024-06-27 01:44:50,083 : ALL (average) : Pearson = 0.5744,             Spearman = 0.5768
+
+2024-06-27 01:44:50,083 : ***** Transfer task : STS16 *****
+
+
+2024-06-27 01:44:50,179 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+2024-06-27 01:44:50,208 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:44:50,983 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:44:51,378 : answer-answer : pearson = 0.4510, spearman = 0.4498
+2024-06-27 01:44:51,695 : headlines : pearson = 0.6548, spearman = 0.6629
+2024-06-27 01:44:52,109 : plagiarism : pearson = 0.7453, spearman = 0.7560
+2024-06-27 01:44:52,692 : postediting : pearson = 0.7676, spearman = 0.7964
+2024-06-27 01:44:52,979 : question-question : pearson = 0.3788, spearman = 0.3626
+2024-06-27 01:44:52,979 : ALL (weighted average) : Pearson = 0.6033,             Spearman = 0.6099
+2024-06-27 01:44:52,979 : ALL (average) : Pearson = 0.5995,             Spearman = 0.6055
+
+2024-06-27 01:44:52,979 : ***** Transfer task : SICK-Relatedness*****
+
+
+2024-06-27 01:44:53,052 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+2024-06-27 01:44:53,079 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:44:53,880 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:44:53,934 : Computing embedding for train
+2024-06-27 01:44:58,816 : Computed train embeddings
+2024-06-27 01:44:58,816 : Computing embedding for dev
+2024-06-27 01:44:59,424 : Computed dev embeddings
+2024-06-27 01:44:59,424 : Computing embedding for test
+2024-06-27 01:45:04,717 : Computed test embeddings
+2024-06-27 01:45:18,279 : Dev : Pearson 0.7588324315389926
+2024-06-27 01:45:18,280 : Test : Pearson 0.7818585842779521 Spearman 0.7159286670665028 MSE 0.39716558228894855                        for SICK Relatedness
+
+2024-06-27 01:45:18,281 : 
+
+***** Transfer task : STSBenchmark*****
+
+
+2024-06-27 01:45:18,486 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+is_peft_available, before loading adapter
+2024-06-27 01:45:18,514 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+now? : None
+now1? : None
+now2? : None
+state_dict is not None: True
+now3? : None
+now4? : None
+done loading models???
+reach here 111
+reach here 222
+reach here 333
+reach here 444
+2024-06-27 01:45:19,300 : https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2024-06-27 01:45:19,352 : Computing embedding for train
+2024-06-27 01:45:27,050 : Computed train embeddings
+2024-06-27 01:45:27,050 : Computing embedding for dev
+2024-06-27 01:45:29,313 : Computed dev embeddings
+2024-06-27 01:45:29,313 : Computing embedding for test
+2024-06-27 01:45:31,135 : Computed test embeddings
+2024-06-27 01:45:48,197 : Dev : Pearson 0.6931873347186676
+2024-06-27 01:45:48,197 : Test : Pearson 0.6444698237533762 Spearman 0.6350951991043766 MSE 1.5447589541889246                        for SICK Relatedness
+
+{'STS12': {'MSRpar': {'pearson': (0.34964016081735355, 5.472410928339934e-23), 'spearman': SpearmanrResult(correlation=0.39726885562481906, pvalue=9.197576779810228e-30), 'nsamples': 750}, 'MSRvid': {'pearson': (0.3585651342773915, 3.57757064302357e-24), 'spearman': SpearmanrResult(correlation=0.3899777349794795, pvalue=1.1881023086106466e-28), 'nsamples': 750}, 'SMTeuroparl': {'pearson': (0.47347319753336586, 5.0584350050006994e-27), 'spearman': SpearmanrResult(correlation=0.5703266547580835, pvalue=5.881966714452913e-41), 'nsamples': 459}, 'surprise.OnWN': {'pearson': (0.5135004584514198, 1.083947142087094e-51), 'spearman': SpearmanrResult(correlation=0.5178633543238508, pvalue=1.0857174378786579e-52), 'nsamples': 750}, 'surprise.SMTnews': {'pearson': (0.5336733543401573, 9.446917658274483e-31), 'spearman': SpearmanrResult(correlation=0.4792491635571911, pvalue=2.6447671781064014e-24), 'nsamples': 399}, 'all': {'pearson': {'mean': 0.4457704610839376, 'wmean': 0.43324941480346246}, 'spearman': {'mean': 0.4709371526486848, 'wmean': 0.460692667145879}}}, 'STS13': {'FNWN': {'pearson': (0.40058074329553117, 1.1196623355460644e-08), 'spearman': SpearmanrResult(correlation=0.41032505217681303, pvalue=4.52112640416055e-09), 'nsamples': 189}, 'headlines': {'pearson': (0.5821162834612357, 3.080429777873359e-69), 'spearman': SpearmanrResult(correlation=0.5555919712240169, pvalue=5.730852693161105e-62), 'nsamples': 750}, 'OnWN': {'pearson': (0.46522659502059704, 1.784289908419391e-31), 'spearman': SpearmanrResult(correlation=0.48912796286888954, pvalue=4.4048365240590084e-35), 'nsamples': 561}, 'all': {'pearson': {'mean': 0.4826412072591213, 'wmean': 0.5155260619235581}, 'spearman': {'mean': 0.48501499542323984, 'wmean': 0.5124308002992516}}}, 'STS14': {'deft-forum': {'pearson': (0.27733369604190433, 2.169720424244124e-09), 'spearman': SpearmanrResult(correlation=0.2836822292296367, pvalue=8.932866071136885e-10), 'nsamples': 450}, 'deft-news': {'pearson': (0.7093758514991358, 3.4785125534899073e-47), 'spearman': SpearmanrResult(correlation=0.6706805493659178, pvalue=1.4869889899871128e-40), 'nsamples': 300}, 'headlines': {'pearson': (0.5341337297581461, 1.5076940938591213e-56), 'spearman': SpearmanrResult(correlation=0.4883390722648629, pvalue=3.3431819002754873e-46), 'nsamples': 750}, 'images': {'pearson': (0.4120757870420431, 4.170214967181013e-32), 'spearman': SpearmanrResult(correlation=0.3997732266831187, pvalue=3.763196050922514e-30), 'nsamples': 750}, 'OnWN': {'pearson': (0.643296016594522, 7.879592498008958e-89), 'spearman': SpearmanrResult(correlation=0.6681454899351202, pvalue=3.883246973620602e-98), 'nsamples': 750}, 'tweet-news': {'pearson': (0.6042875904228825, 7.55349410695666e-76), 'spearman': SpearmanrResult(correlation=0.5592781151737201, pvalue=6.122659707796958e-63), 'nsamples': 750}, 'all': {'pearson': {'mean': 0.5300837785597723, 'wmean': 0.5287887364084781}, 'spearman': {'mean': 0.5116497804420628, 'wmean': 0.5108034922681942}}}, 'STS15': {'answers-forums': {'pearson': (0.5427090742975194, 4.162798870714606e-30), 'spearman': SpearmanrResult(correlation=0.5525897752170189, pvalue=2.288366559965063e-31), 'nsamples': 375}, 'answers-students': {'pearson': (0.533999483644864, 1.625571933004489e-56), 'spearman': SpearmanrResult(correlation=0.532431283366922, pvalue=3.906820060825435e-56), 'nsamples': 750}, 'belief': {'pearson': (0.6182775997923801, 6.41333437768713e-41), 'spearman': SpearmanrResult(correlation=0.6235675044421982, pvalue=8.65914750152878e-42), 'nsamples': 375}, 'headlines': {'pearson': (0.6191552476175299, 1.3988041285093133e-80), 'spearman': SpearmanrResult(correlation=0.6105266818552691, pvalue=8.372165934528504e-78), 'nsamples': 750}, 'images': {'pearson': (0.5579935089299113, 1.3390857807388645e-62), 'spearman': SpearmanrResult(correlation=0.5647184889093269, pvalue=2.142844642162534e-64), 'nsamples': 750}, 'all': {'pearson': {'mean': 0.5744269828564409, 'wmean': 0.5729103943093137}, 'spearman': {'mean': 0.5767667467581471, 'wmean': 0.5739387734902817}}}, 'STS16': {'answer-answer': {'pearson': (0.4509762930283866, 3.9616372040240176e-14), 'spearman': SpearmanrResult(correlation=0.4497763069023978, pvalue=4.7118100172629985e-14), 'nsamples': 254}, 'headlines': {'pearson': (0.6547998341270541, 7.138107839294237e-32), 'spearman': SpearmanrResult(correlation=0.6629050911526315, pvalue=6.855370194813598e-33), 'nsamples': 249}, 'plagiarism': {'pearson': (0.7452501307159579, 5.217513918876352e-42), 'spearman': SpearmanrResult(correlation=0.7559540190158008, pvalue=7.7421837322052295e-44), 'nsamples': 230}, 'postediting': {'pearson': (0.7676329113571093, 1.1608291836489032e-48), 'spearman': SpearmanrResult(correlation=0.7964465648778803, pvalue=8.742355000794547e-55), 'nsamples': 244}, 'question-question': {'pearson': (0.37876550219860255, 1.5582465605497455e-08), 'spearman': SpearmanrResult(correlation=0.36260943169489757, pvalue=6.833201250756976e-08), 'nsamples': 209}, 'all': {'pearson': {'mean': 0.599484934285422, 'wmean': 0.6032589270844516}, 'spearman': {'mean': 0.6055382827287217, 'wmean': 0.6098602926461086}}}, 'SICKRelatedness': {'devpearson': 0.7588324315389926, 'pearson': 0.7818585842779521, 'spearman': 0.7159286670665028, 'mse': 0.39716558228894855, 'yhat': array([2.76781251, 4.07737712, 1.65914358, ..., 3.20987402, 4.41736664,
+       4.6368761 ]), 'ndev': 500, 'ntest': 4927}, 'STSBenchmark': {'devpearson': 0.6931873347186676, 'pearson': 0.6444698237533762, 'spearman': 0.6350951991043766, 'mse': 1.5447589541889246, 'yhat': array([2.50359611, 1.14066831, 2.60844293, ..., 3.78296279, 4.1294856 ,
+       3.58837839]), 'ndev': 1500, 'ntest': 1379}}

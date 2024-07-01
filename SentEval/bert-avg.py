@@ -13,6 +13,9 @@ import numpy as np
 import torch
 import logging
 
+sys.path.append('/nfshomes/litzy/mixture-of-adapters/')
+sys.path.append('/nfshomes/litzy/mixture-of-adapters/peft/src/')
+
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from transformers import BertModel, BertTokenizer
@@ -41,6 +44,9 @@ def batcher(params, batch):
     out = params.tokenizer(batch, max_length=128, truncation=True, padding=True, return_tensors='pt').to(device)
     out = params.bert(**out).last_hidden_state.squeeze()
     out = torch.mean(out, 1)
+    
+    
+    print('out.shape: ', out.shape)
     
     embeddings = out.detach().to(device_cpu)
     

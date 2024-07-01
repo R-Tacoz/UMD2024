@@ -107,6 +107,14 @@ We also provide example scripts for three other encoders:
 Note that for SkipThought and GenSen, following the steps of the associated githubs is necessary.
 The Google encoder script should work as-is.
 
+
+## Loading the Pretrained Model
+
+To load a pretrained model, use the `load_model` function provided in the script. This function takes two arguments:
+- `base_model`: The name of the base model from Hugging Face.
+- `peft`: (Optional) The path to the adapter. If not provided, only the base pretrained model will be loaded.
+
+
 ## How to use SentEval
 
 To evaluate your sentence embeddings, SentEval requires that you implement two functions:
