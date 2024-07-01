@@ -1,0 +1,11 @@
+Doctor-Shotgun/mistral-v0.1-supercot-lora
+alignment-handbook/zephyr-7b-dpo-qlora
+dvijay/mistral-alpaca2k-3e-lora
+Undi95/Mistral-7B-smoll_pippa-lora
+andersonjas/mistral-7b-felon_whatsapp_lora
+uukuguy/Mistral-7B-OpenOrca-lora
+dolo650/Mistral-7B-lora-yahma-alpaca-unsloth-bnb
+tgaddair/mistral-7b-tldrnews-headlines-lora-r8
+tgaddair/mistral-7b-amazon-reviews-lora-r8
+tgaddair/mistral-7b-gsmk8k-lora-r8
+tgaddair/mistral-7b-magicoder-lora-r8
