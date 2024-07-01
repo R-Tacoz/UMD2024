@@ -306,7 +306,7 @@ class ModelOutput(OrderedDict):
         `static_graph=True` with modules that output `ModelOutput` subclasses.
         """
         if is_torch_available():
-            _torch_pytree._register_pytree_node(
+            _torch_pytree.register_pytree_node(
                 cls,
                 _model_output_flatten,
                 _model_output_unflatten,
@@ -438,7 +438,7 @@ if is_torch_available():
         output_type, keys = context
         return output_type(**dict(zip(keys, values)))
 
-    _torch_pytree._register_pytree_node(
+    _torch_pytree.register_pytree_node(
         ModelOutput,
         _model_output_flatten,
         _model_output_unflatten,

@@ -9,27 +9,25 @@ from __future__ import absolute_import, division, unicode_literals
 
 import sys
 import io
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import numpy as np
 import torch
 import logging
 
-sys.path.append('/nfshomes/litzy/mixture-of-adapters/')
-sys.path.append('/nfshomes/litzy/mixture-of-adapters/peft/src/')
+# Set PATHs
+PATH_TO_CUSTOMS = '../pkgs/'
+PATH_TO_SENTEVAL = '../SentEval/'
+PATH_TO_DATA = '../SentEval/data/'
 
-import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
+sys.path.append(PATH_TO_CUSTOMS)
+sys.path.insert(0, PATH_TO_SENTEVAL)
+
 from transformers import BertModel, BertTokenizer
+import senteval
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device_cpu = torch.device('cpu')
-
-# Set PATHs
-PATH_TO_SENTEVAL = './'
-PATH_TO_DATA = './data'
-
-# import SentEval
-sys.path.insert(0, PATH_TO_SENTEVAL)
-import senteval
 
 # SentEval prepare and batcher
 def prepare(params, samples):
@@ -46,7 +44,7 @@ def batcher(params, batch):
     out = torch.mean(out, 1)
     
     
-    print('out.shape: ', out.shape)
+    # print('out.shape: ', out.shape)
     
     embeddings = out.detach().to(device_cpu)
     

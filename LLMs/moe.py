@@ -9,14 +9,20 @@ from __future__ import absolute_import, division, unicode_literals
 
 import sys
 import io
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import numpy as np
+import torch
 import logging
 import argparse
-import os
-import torch
 
-sys.path.append('/nfshomes/litzy/mixture-of-adapters/') # to replace
-sys.path.append('/nfshomes/litzy/mixture-of-adapters/peft/src/') # to replace
+# Set PATHs
+PATH_TO_CUSTOMS = '../pkgs/'
+PATH_TO_SENTEVAL = '../SentEval/'
+PATH_TO_DATA = '../SentEval/data/'
+
+sys.path.append(PATH_TO_CUSTOMS)
+sys.path.insert(0, PATH_TO_SENTEVAL)
 
 import senteval
 

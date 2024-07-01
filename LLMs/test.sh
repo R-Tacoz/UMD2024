@@ -43,7 +43,7 @@
 
 # . /usr/share/Modules/init/bash
 # . /etc/profile.d/ummodules.sh
-module load Python/3.7.6
+module load Python3/3.8.2
 module load cuda/11.7.0
 
 source ../../LLM-Adapters/env38/bin/activate

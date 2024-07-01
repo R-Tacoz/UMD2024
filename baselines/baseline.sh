@@ -46,7 +46,7 @@
 module load Python/3.7.6
 module load cuda/11.7.0
 
-source ../../LLM-Adapters/env38/bin/activate
+source ../../../LLM-Adapters/env38/bin/activate
 
 echo "now processing task id:: " ${SLURM_ARRAY_TASK_ID}
 
